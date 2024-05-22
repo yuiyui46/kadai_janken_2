@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/sample.css">
+    <link rel="icon" type="img/png" href="img/favi.png">
+    <title>健康経営度調査申請表チェックリスト</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.jsを読み込む -->
+    <script src="js/script.js" defer></script> <!-- script.jsをdefer属性で読み込む -->
+</head>
+<body>
+    <div id="question-container">
+        <div class="question" data-question="1">
+            <h2>1. 健康管理方針の策定</h2>
+            <div class="buttons">
+                <button onclick="selectAnswer(1, 2, this)">〇</button>
+                <button onclick="selectAnswer(1, 1, this)">△</button>
+                <button onclick="selectAnswer(1, 0, this)">✕</button>
+            </div>
+            <img id="image-1" class="question-image" src="img/1.png" alt="Image for question 1">
+            <button onclick="nextQuestion(1)" id="next-btn-1" class="next-btn" style="display:none;">次へ</button>
+        </div>
+        <div class="question" data-question="2" style="display:none;">
+            <h2>2. 健康管理体制の整備</h2>
+            <div class="buttons">
+                <button onclick="selectAnswer(2, 2, this)">〇</button>
+                <button onclick="selectAnswer(2, 1, this)">△</button>
+                <button onclick="selectAnswer(2, 0, this)">✕</button> 
+            </div>
+            <img id="image-2" class="question-image" src="img/2.png" alt="Image for question 2">
+            <button onclick="nextQuestion(2)" id="next-btn-2" class="next-btn" style="display:none;">次へ</button>
+        </div>
+        <div class="question" data-question="3" style="display:none;">
+            <h2>3. 従業員の健康診断の実施</h2>
+            <div class="buttons">
+                <button onclick="selectAnswer(3, 2, this)">〇</button>
+                <button onclick="selectAnswer(3, 1, this)">△</button>
+                <button onclick="selectAnswer(3, 0, this)">✕</button>
+            </div>
+            <img id="image-3" class="question-image" src="img/3.png" alt="Image for question 3">
+            <button onclick="nextQuestion(3)" id="next-btn-3" class="next-btn" style="display:none;">次へ</button>
+        </div>
+        <div class="question" data-question="4" style="display:none;">
+            <h2>4. 健康教育の実施</h2>
+            <div class="buttons">
+                <button onclick="selectAnswer(4, 2, this)">〇</button>
+                <button onclick="selectAnswer(4, 1, this)">△</button>
+                <button onclick="selectAnswer(4, 0, this)">✕</button>
+            </div>
+            <img id="image-4" class="question-image" src="img/4.png" alt="Image for question 4">
+            <button onclick="nextQuestion(4)" id="next-btn-4" class="next-btn" style="display:none;">次へ</button>
+        </div>
+        <div class="question" data-question="5" style="display:none;">
+            <h2>5. ストレスチェックの実施</h2>
+            <div class="buttons">
+                <button onclick="selectAnswer(5, 2, this)">〇</button>
+                <button onclick="selectAnswer(5, 1, this)">△</button>
+                <button onclick="selectAnswer(5, 0, this)">✕</button>
+            </div>
+            <img id="image-5" class="question-image" src="img/5.png" alt="Image for question 5">
+            <button onclick="nextQuestion(5)" id="next-btn-5" class="next-btn" style="display:none;">次へ</button>
+        </div>
+        <div class="question" data-question="6" style="display:none;">
+            <h2>6. メンタルヘルス対策の実施</h2>
+            <div class="buttons">
+                <button onclick="selectAnswer(6, 2, this)">〇</button>
+                <button onclick="selectAnswer(6, 1, this)">△</button>
+                <button onclick="selectAnswer(6, 0, this)">✕</button>
+            </div>
+            <img id="image-6" class="question-image" src="img/6.png" alt="Image for question 6">
+            <button onclick="nextQuestion(6)" id="next-btn-6" class="next-btn" style="display:none;">次へ</button>
+        </div>
+        <div class="question" data-question="7" style="display:none;">
+            <h2>7. 健康経営に関する情報の公開</h2>
+            <div class="buttons">
+                <button onclick="selectAnswer(7, 2, this)">〇</button>
+                <button onclick="selectAnswer(7, 1, this)">△</button>
+                <button onclick="selectAnswer(7, 0, this)">✕</button>
+            </div>
+            <img id="image-7" class="question-image" src="img/7.png" alt="Image for question 7">
+            <button onclick="nextQuestion(7)" id="next-btn-7" class="next-btn" style="display:none;">次へ</button>
+        </div>
+    </div>
+    <div id="result-container" style="display:none;">
+        <div class="chart-container">
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+</body>
+</html>

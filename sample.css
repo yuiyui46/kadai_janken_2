@@ -1,0 +1,122 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    text-align: center;
+    background-size: cover; /* 背景画像をカバーサイズに設定 */
+    background-position: center; /* 背景画像を中央に配置 */
+}
+
+h2 {
+    font-size: 28px; /* 見出しのフォントサイズを大きくする */
+    color: #333;
+}
+
+.question {
+    margin: 20px;
+    background: rgba(255, 255, 255, 0.8); /* 背景画像の上に白い半透明の背景 */
+    padding: 20px;
+    border-radius: 10px; /* 角を丸くする */
+}
+
+.buttons {
+    margin-bottom: 20px; /* ボタン群と次へボタンの間にスペースを追加 */
+}
+
+button {
+    margin: 10px;
+    padding: 20px 30px; /* パディングを増やしてボタンを大きくする */
+    font-size: 24px; /* ボタンのフォントサイズを大きくする */
+    cursor: pointer;
+    border: none;
+    border-radius: 10px; /* ボタンの角を丸くする */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* ボタンにシャドウを追加 */
+}
+
+button:nth-of-type(1) {
+    background-color: #ff6347; /* トマト色 */
+    color: white;
+}
+
+button:nth-of-type(2) {
+    background-color: #ffa500; /* オレンジ色 */
+    color: white;
+}
+
+button:nth-of-type(3) {
+    background-color: #4682b4; /* スチールブルー色 */
+    color: white;
+}
+
+button[id^="next-btn"] {
+    background-color: #32cd32; /* ライムグリーン色 */
+    color: white;
+    display: block; /* ブロック要素として表示 */
+    margin: 20px auto 0 auto; /* 上下左右中央揃え */
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button.active,
+button:nth-of-type(1):hover,
+button.selected:nth-of-type(1) {
+    background-color: #e55341; /* トマト色の濃いバージョン */
+}
+
+button.active,
+button:nth-of-type(2):hover,
+button.selected:nth-of-type(2) {
+    background-color: #e69500; /* オレンジ色の濃いバージョン */
+}
+
+button.active,
+button:nth-of-type(3):hover,
+button.selected:nth-of-type(3) {
+    background-color: #3b6a8e; /* スチールブルー色の濃いバージョン */
+}
+
+button.active,
+button[id^="next-btn"]:hover {
+    background-color: #28a428; /* ライムグリーン色の濃いバージョン */
+}
+
+button:active {
+    transform: scale(1.05);
+}
+
+
+#myChart {
+    width: 100%; /* チャートをコンテナに合わせる */
+    height: auto; /* 高さを自動調整 */
+}
+
+.question-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+
+@media (max-width: 600px) {
+    h2 {
+        font-size: 22px; /* 小さい画面で見出しのフォントサイズを調整 */
+    }
+    
+    button {
+        width: 100%;
+        margin: 10px 0;
+        font-size: 22px; /* 小さい画面でボタンのフォントサイズを調整 */
+        padding: 15px 20px; /* 小さい画面でのパディング調整 */
+    }
+
+    .chart-container {
+        max-width: 100%; /* 小さい画面ではチャートをフル幅にする */
+    }
+
+    .comments {
+        font-size: 16px; /* 小さい画面でコメントのフォントサイズを調整 */
+    }
+}
+}
